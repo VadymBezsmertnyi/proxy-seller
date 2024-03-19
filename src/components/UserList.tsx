@@ -1,6 +1,8 @@
 import React, { FunctionComponent, useMemo } from "react";
-import { AlbumType, PostType, UserType } from "../types";
 import { Link } from "react-router-dom";
+
+// types
+import { AlbumType, PostType, UserType } from "../types";
 
 type UserListProps = {
   number: number;

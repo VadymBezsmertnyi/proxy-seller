@@ -1,6 +1,8 @@
 import React, { FunctionComponent, useMemo } from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
+
+// types
 import { PostType, UserType } from "../../types";
 
 type PostsProps = {

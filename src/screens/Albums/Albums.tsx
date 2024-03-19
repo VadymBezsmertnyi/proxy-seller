@@ -1,7 +1,9 @@
 import React, { FunctionComponent, useMemo } from "react";
 import { Helmet } from "react-helmet";
-import { AlbumType, UserType } from "../../types";
 import { useParams } from "react-router-dom";
+
+// types
+import { AlbumType, UserType } from "../../types";
 
 type AlbumsProps = {
   users: UserType[];

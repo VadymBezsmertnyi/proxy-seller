@@ -1,5 +1,7 @@
 import { z } from "zod";
-import { albumSchema, postSchema, userSchema } from "../scremas";
+
+// schemas
+import { albumSchema, postSchema, userSchema } from "../schemas";
 
 export type UserType = z.infer<typeof userSchema>;
 export type PostType = z.infer<typeof postSchema>;

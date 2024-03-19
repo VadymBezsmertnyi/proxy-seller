@@ -1,9 +1,15 @@
 import React from "react";
 import express from "express";
-import { renderToString } from "react-dom/server";
-import App from "./App";
 import { Helmet } from "react-helmet";
+import { renderToString } from "react-dom/server";
+
+// main component
+import App from "./App";
+
+// apis
 import { fetchDataAlbums, fetchDataPosts, fetchDataUsers } from "./api";
+
+// styles
 import { styles } from "./styles";
 
 const app = express();

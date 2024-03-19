@@ -1,4 +1,6 @@
 import axios from "axios";
+
+// types
 import { AlbumType, PostType, UserType } from "../types";
 
 export const fetchDataUsers = async () => {
