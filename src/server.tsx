@@ -3,11 +3,18 @@ import express from "express";
 import { renderToString } from "react-dom/server";
 import App from "./App";
 import { Helmet } from "react-helmet";
+import { fetchDataAlbums, fetchDataPosts, fetchDataUsers } from "./api";
+import { styles } from "./styles";
 
 const app = express();
 
-app.get("*", (req, res) => {
-  const appMarkup = renderToString(<App url={req.url} />);
+app.get("*", async (req, res) => {
+  const users = await fetchDataUsers();
+  const posts = await fetchDataPosts();
+  const albums = await fetchDataAlbums();
+  const appMarkup = renderToString(
+    <App url={req.url} initialState={{ users, posts, albums }} />
+  );
   const helmet = Helmet.renderStatic();
 
   res.send(`
@@ -16,6 +23,7 @@ app.get("*", (req, res) => {
     <head>
       ${helmet.title.toString()}
       ${helmet.meta.toString()}
+      ${styles}
     </head>
     <body ${helmet.bodyAttributes.toString()}>
       <div id="root">${appMarkup}</div>
