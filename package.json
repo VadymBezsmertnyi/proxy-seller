@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "npx webpack --config webpack.config.js & node dist/server.bundle.js",
+    "dev": "npx webpack --config webpack.config.js && node dist/server.bundle.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
