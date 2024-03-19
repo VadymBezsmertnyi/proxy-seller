@@ -18,9 +18,8 @@ app.get("*", (req, res) => {
       ${helmet.meta.toString()}
     </head>
     <body ${helmet.bodyAttributes.toString()}>
-        <div id="root">${appMarkup}</div>
-        <script src="/bundle.js"></script>
-      </body>
+      <div id="root">${appMarkup}</div>
+    </body>
     </html>
   `);
 });

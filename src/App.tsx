@@ -4,7 +4,7 @@ import { Home } from "./screens/Home/Home";
 import { Posts } from "./screens/Posts/Posts";
 import { Albums } from "./screens/Albums/Albums";
 
-export default function App({ url }) {
+export default function App({ url }: { url: string }) {
   return (
     <MemoryRouter initialEntries={[url]}>
       <Routes>
