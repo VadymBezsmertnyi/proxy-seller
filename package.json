@@ -10,6 +10,7 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.90",
     "async_hooks": "^1.0.0",
+    "axios": "^1.6.8",
     "fs": "^0.0.1-security",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -17,10 +18,12 @@
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zod": "^3.22.4"
   },
   "scripts": {
-    "dev": "npx webpack --config webpack.config.js && node dist/server.bundle.js",
+    "prod": "npx webpack --config webpack.config.js && node dist/server.bundle.js",
+    "dev": "npx nodemon",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
